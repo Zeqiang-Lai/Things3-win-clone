@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1DBA6E10-6A05-48F0-BED9-6F33E0D3E986}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BorderlessForm</RootNamespace>
+    <AssemblyName>Thing3</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Thing3Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Animation\MyAnimation.cs" />
+    <Compile Include="Datas\MyData.cs" />
+    <Compile Include="Datas\MyTodo.cs" />
+    <Compile Include="Datas\OriginData.cs" />
+    <Compile Include="Interaction\MyInteraction.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MyComponent\Menu\itemMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyComponent\Page\MyAnytimePanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyComponent\MyAreaPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyComponent\MyAutoSizeTextbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyComponent\MyColor.cs" />
+    <Compile Include="MyComponent\Page\MyContentPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyComponent\MyImage.cs" />
+    <Compile Include="MyComponent\Page\MyInboxPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyComponent\MyInputBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyComponent\MyListItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyComponent\MyListItemTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyComponent\Page\MyLogbookPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyComponent\Page\MySomedayPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyComponent\Page\MyTodayPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyComponent\MyTodoItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyComponent\MyTodoPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyComponent\Page\MyTrashPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyComponent\Page\MyUpcomingPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyComponent\Page\MyUserAreaPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="MyComponent\Page\MyUserListPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Native.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="FormBase.resx">
+      <DependentUpon>FormBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SettingForm.resx">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Path 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 10.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bigcircle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bigarea.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\area.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ellipse 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group 13.png" />
+    <None Include="Resources\Rectangle 14.png" />
+    <None Include="Resources\bluethreedot.png" />
+    <None Include="Resources\Group 12.png" />
+    <None Include="Resources\Ellipse 2.png" />
+    <None Include="Resources\Group 1.png" />
+    <None Include="Resources\biginbox.png" />
+    <None Include="Resources\biglogbook.png" />
+    <None Include="Resources\bigsomeday.png" />
+    <None Include="Resources\bigupcoming.png" />
+    <None Include="Resources\bigtoday.png" />
+    <None Include="Resources\bigtrash.png" />
+    <None Include="Resources\biganytime.png" />
+    <None Include="Resources\big_area %282%29.png" />
+    <None Include="Resources\blueCheckbox.png" />
+    <None Include="Resources\editbtn.png" />
+    <None Include="Resources\editB.png" />
+    <Content Include="Thing3Icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
